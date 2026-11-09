@@ -43,6 +43,14 @@
     .data-table tr:nth-child(even) {
       background-color: #fafafa;
     }
+    .report-figure { margin: 1.5rem 0; text-align: center; break-inside: avoid; }
+    .report-figure img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+    .report-figure > img { max-height: 620px; object-fit: contain; }
+    .report-figure figcaption { margin-top: 0.6rem; font-size: 0.9rem; line-height: 1.5; }
+    .figure-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: center; }
+    .figure-pair img { max-height: 420px; object-fit: contain; }
+    @media print { .report-figure { page-break-inside: avoid; } .report-figure > img { max-height: 140mm; } }
+    @media screen and (max-width: 540px) { .figure-pair { grid-template-columns: 1fr; } }
   </style>
 </head>
 
@@ -141,8 +149,10 @@
           <li><strong>5) Anti-Roll Bars & Steering:</strong> Torsion bar linkages controlling body roll stiffness during cornering, paired with a rack-and-pinion steering assembly to convert driver input into front wheel steer angles.</li>
           <li><strong>6) Brakes:</strong> Floating wave rotors and hydraulic calipers mounted to the front and rear hub assemblies.</li>
         </ul>
-        <image-component tag="r27e-suspension" source="assets/r27e_suspension.png"
-          subtitle="Figure 1: R27e Front and Rear Suspension CAD Assembly"></image-component>
+        <figure class="report-figure" id="r27e-suspension">
+          <img src="assets/r27e_suspension.png" alt="CAD overview of the R27e front and rear suspension assemblies with wheels." loading="lazy">
+          <figcaption>Figure 1: R27e front and rear suspension CAD assemblies. Source: 27 Suspension, slide 3.</figcaption>
+        </figure>
       </div>
 
       <div id="sub-section-targets">
@@ -277,8 +287,10 @@
         <p>
           Total tractive braking force is governed by Newton's second law ($F = ma$), where the front tractive force equals the total required braking force minus the rear tire capacity. From the polynomial convergence curves, the front braking force demand intersects the front tire capacity limit at exactly <strong>1.595 G</strong>.
         </p>
-        <image-component tag="braking-graph" source="assets/braking_forces_graph.png"
-          subtitle="Figure 2: Braking Forces (N) vs. Deceleration (G) Supply & Demand Curves"></image-component>
+        <figure class="report-figure" id="braking-graph">
+          <img src="assets/braking_forces_graph.png" alt="Graph comparing front and rear theoretical optimal braking forces and tyre capacity against deceleration in G." loading="lazy">
+          <figcaption>Figure 2: Front and rear braking force demand and tyre capacity versus deceleration. Source: 27 Suspension, slide 12. Open the image at full size to read the equations and legend.</figcaption>
+        </figure>
       </div>
 
       <div id="sub-section-sizing">
@@ -369,8 +381,11 @@
         <p>
           By evaluating the simulated stress distributions across the upright and suspension linkages, excessive low-stress material was removed to optimize component mass, while highly stressed mounting features were reinforced to guarantee a minimum <strong>Factor of Safety (FOS) of 2.0</strong>.
         </p>
-        <image-component tag="upright-fea" source="assets/upright_fea.png"
-          subtitle="Figure 3: ANSYS Static Structural Stress Distribution on Upright and Suspension Linkages"></image-component>
+        <figure class="report-figure" id="upright-fea">
+          <div class="figure-pair"><img src="assets/suspension_fea.png" alt="ANSYS contour view of the suspension assembly." loading="lazy">
+          <img src="assets/upright_fea.png" alt="ANSYS contour view of the upright." loading="lazy"></div>
+          <figcaption>Figure 3: Suspension assembly (left) and upright (right) contour views used in structural analysis. Source: 27 Suspension, slide 14. The supplied images omit result legends, units and load-case details, so numerical stress values and factors of safety cannot be read from these views.</figcaption>
+        </figure>
       </div>
 
       <div id="sub-section-thermal">
@@ -438,8 +453,10 @@
         <p>
           <strong>4130 Steel</strong> achieved the highest net score (13 points), offering superior resistance to thermal deformation, stable friction coefficient across operating temperatures, and good ductility compared to brittle cast iron.
         </p>
-        <image-component tag="rotor-thermal" source="assets/rotor_thermal_fea.png"
-          subtitle="Figure 4: ANSYS Brake Rotor Thermal Distribution Simulation"></image-component>
+        <figure class="report-figure" id="rotor-thermal">
+          <img src="assets/rotor_fea.png" alt="Meshed brake rotor and hub showing a coloured contour with minimum and maximum markers." loading="lazy">
+          <figcaption>Figure 4: Meshed rotor and hub contour view accompanying the rotor design discussion. Source: 27 Suspension, slide 15. The supplied image has no result legend, units or numerical scale, so the plotted quantity and temperature values cannot be established from this image alone.</figcaption>
+        </figure>
       </div>
 
       <div id="sub-section-sim-methodology">
@@ -471,7 +488,7 @@
       <div id="section-future">
         <h2>5. Future Work & Project Timeline</h2>
         <p>
-          Building upon the baseline R26 drilled rotor towards the slotted wave Prototype rotor, the remaining project phases focus on iterative validation, manufacturing, and physical track testing.
+          The R26 rotor and proposed prototype are compared below. The remaining project phases focus on iterative validation, manufacturing, and physical track testing.
         </p>
       </div>
 
@@ -481,8 +498,11 @@
           <li><strong>Short-Term Tasks:</strong> Conduct iterative FEA testing across alternative rotor cutout geometries to achieve optimal weight and highest FOS; manufacture the custom rotors and uprights; perform physical brake system testing and bias tuning on the car to verify 4-wheel lock-up; and integrate regenerative braking (regen) with the mechanical hydraulic system.</li>
           <li><strong>Long-Term Tasks:</strong> Build and validate a comprehensive Multi-Step Transient Thermal Analysis simulation over a full lap profile to further characterize dynamic brake thermal behavior.</li>
         </ul>
-        <image-component tag="rotor-designs" source="assets/rotor_comparison.png"
-          subtitle="Figure 5: Comparison of R26 Drilled Rotor vs. New Slotted Wave Prototype Design"></image-component>
+        <figure class="report-figure" id="rotor-designs">
+          <div class="figure-pair"><img src="assets/r26_rotor.png" alt="R26 rotor drawing with elongated slots, as labelled on slide 19." loading="lazy">
+          <img src="assets/prototype_rotor.png" alt="Prototype rotor drawing with circular perforations, as labelled on slide 19." loading="lazy"></div>
+          <figcaption>Figure 5: R26 rotor (left) and prototype rotor (right), following the labels in the source presentation. Source: 27 Suspension, slide 19.</figcaption>
+        </figure>
       </div>
 
       <div id="sub-section-milestones">
