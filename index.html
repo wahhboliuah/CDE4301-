@@ -161,6 +161,9 @@
           </tbody>
         </table>
         <p>
+          To reach 1.20 kg, the 270 g saving is allocated to the parts being redesigned. The upright and rotor each have a target about 43% lighter than R26, while the hub, wheel bearings, tripod liners and preload plate carry over (Appendix A.8).
+        </p>
+        <p>
           The optimization methodology follows a rigorous five-stage engineering workflow:
         </p>
         <ol>
@@ -445,6 +448,11 @@
               <td>Pedal effort and brake balance may vary as the brakes heat up.</td>
               <td>Measure friction coefficient against temperature with the R27e pads, on a dynamometer or from logged track data, before the design is frozen.</td>
             </tr>
+            <tr>
+              <td>The 1.20 kg target needs the upright and rotor to be about 43% lighter than R26.</td>
+              <td>The target may not be achievable within the safety and temperature limits.</td>
+              <td>Use the FEA and validated thermal model to find the mass that can be removed. If needed, revise the target with that evidence rather than lowering the FOS of 2.0 or the 350 °C limit.</td>
+            </tr>
           </tbody>
         </table>
         <p>
@@ -630,7 +638,7 @@
         </table>
       </div>
       <div id="appendix-mass">
-        <h3>A.8. R26 Rear Corner Mass Baseline</h3>
+        <h3>A.8. Rear Corner Mass Baseline &amp; Budget</h3>
         <p>The mass target is measured against the weighed R26 rear components, per corner (half of each car-set total):</p>
         <table class="data-table">
           <thead><tr><th>Component</th><th>R26 car set (g)</th><th>Per rear corner (g)</th></tr></thead>
@@ -644,7 +652,17 @@
             <tr><td><strong>Total</strong></td><td><strong>2,940.98</strong></td><td><strong>1,470.49</strong></td></tr>
           </tbody>
         </table>
-        <p>A 1.20 kg target is therefore a reduction of 1 − 1,200 / 1,470.5 = <strong>18.4%</strong>.</p>
+        <p>A 1.20 kg target is therefore a reduction of 1 − 1,200 / 1,470.5 = <strong>18.4%</strong>, or 270.5 g per corner.</p>
+        <p>The saving is budgeted across the parts being redesigned. The hub, wheel bearings, tripod liners and preload plate carry over at their R26 masses (845.2 g). The full 270.5 g is shared in proportion to mass between the upright and rotor, so each needs a 43.3% reduction. These are design targets, not measured R27e masses:</p>
+        <table class="data-table">
+          <thead><tr><th>Component (per rear corner)</th><th>R26 (g)</th><th>R27e target (g)</th><th>Saving (g)</th><th>Planned route</th></tr></thead>
+          <tbody>
+            <tr><td>Upright</td><td>369.4</td><td>209.6</td><td>−159.8</td><td>Remove low-stress material using the 9 FEA load cases</td></tr>
+            <tr><td>Rotor</td><td>255.9</td><td>145.2</td><td>−110.7</td><td>Size cutouts and thickness with the validated thermal model (Section 5.2)</td></tr>
+            <tr><td>Hub, wheel bearings (×2), tripod liners (×3), preload plate</td><td>845.2</td><td>845.2</td><td>0</td><td>Carried over</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>1,470.5</strong></td><td><strong>1,200.0</strong></td><td><strong>−270.5</strong></td><td></td></tr>
+          </tbody>
+        </table>
       </div>
     <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-5.html" data-page="section-5.html">← Previous chapter</a><a href="?page=all" data-page="all">Read the full report →</a></nav></article>
 
