@@ -55,7 +55,8 @@ function setup(host) {
 
   const subOf = mesh => Object.keys(SUBSYSTEMS).find(k => SUBSYSTEMS[k].groups.includes(mesh.userData.group));
   const inView = mesh => view === 'all' || mesh.userData.section === view;
-  const shortName = n => String(n || '').split(' · ')[0];
+  // CAD names that are out of date on the car (the CAD still carries the old tyre size).
+  const shortName = n => /Hoosier/.test(n) ? 'Hoosier 18.0×6.0-10 R20 tyre' : String(n || '').split(' · ')[0];
 
   new IntersectionObserver(entries => {
     active = entries[0].isIntersecting;

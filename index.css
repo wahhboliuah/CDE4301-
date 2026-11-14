@@ -99,3 +99,8 @@ body.lightbox-open { overflow: hidden; }
   .figure-pair img { max-height: 90mm; }
   .report-figure figcaption { font-size: 9pt; }
 }
+.references { margin-top: 48px; padding-top: 6px; border-top: 1px solid var(--line); }
+.references ol { padding-left: 24px; font-size: .88rem; line-height: 1.6; color: #405167; }
+.references li { margin-bottom: 8px; }
+.eq { margin: 6px 0 20px; padding: 10px 16px; border-left: 3px solid var(--accent); background: #f6f8fb; text-align: left; font-size: .95rem; overflow-x: auto; }
+.eq var, .data-table var { font-family: "Times New Roman", Georgia, serif; font-size: 1.05em; }
