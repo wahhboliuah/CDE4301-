@@ -23,7 +23,7 @@
     gate.className = 'pw-gate';
     gate.innerHTML = `
       <form class="pw-card" novalidate>
-        <p class="pw-eyebrow">CDE4301 · Final Year Project</p>
+        <p class="pw-eyebrow">CDE4301 · FTS-431</p>
         <h1 class="pw-title">Optimisation of Suspension and Brakes System for FSAE</h1>
         <p class="pw-text">This report is password protected. Enter the password to continue.</p>
         <label class="pw-label" for="pw-input">Password</label>
