@@ -13,6 +13,14 @@ The contents sidebar stays visible while the selected chapter changes. A link su
 
 Use **Read full report** to see all chapters. **Print / Save PDF** prints the entire report, including chapters that are hidden in the normal chapter view. Select Save as PDF in the browser's print dialog. Check the preview before submission, since page breaks can vary between browsers.
 
+## Interactive suspension model
+
+Section 1.1 shows an interactive 3D model of the R27e suspension (`assets/models/r27e-suspension.glb`, exported from the SolidWorks assembly). The viewer is `components/suspension/viewer.js` and `viewer.css`; Three.js and its Draco decoder are served from `components/suspension/vendor/`, so no build step is needed.
+
+Callout labels name the key parts and are coloured by subsystem. To add, rename or move a label, edit the `LABELS` list at the top of `viewer.js`: `match` selects the CAD parts by name, and `at` sets which corner of the car carries the callout in each view. Subsystem names and colours are in `SUBSYSTEMS`. The subsystem cards below the model highlight their parts when hovered or tapped. Printing uses the static image instead of the 3D view.
+
+To replace the model, export the assembly from SolidWorks as glTF/GLB (for example with a glTF exporter add-in, or via STEP into Blender), keep the part names, and save it over `assets/models/r27e-suspension.glb`.
+
 ## Password protection
 
 **Password protection requires setup. The presence of a workflow file does not mean the current website is protected.** Follow [PASSWORD_SETUP.md](PASSWORD_SETUP.md).

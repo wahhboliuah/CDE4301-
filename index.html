@@ -3,6 +3,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Optimisation of Suspension and Brakes System for FSAE</title>
 <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="components/suspension/viewer.css">
 </head><body>
 <a class="skip-link" href="#report-content">Skip to report</a>
 <aside class="sidebar" id="sidebar">
@@ -22,19 +23,36 @@
       <div id="sub-section-architecture">
         <h3>1.1. R27e Suspension Architecture &amp; Subsystems</h3>
         <p>
-          The R27e suspension system integrates six core mechanical subsystems working in tandem to manage vehicle loads and driver inputs:
+          The R27e suspension system integrates six core mechanical subsystems working in tandem to manage vehicle loads and driver inputs. The interactive model below shows the front and rear assemblies, with each key part labelled by name.
         </p>
-        <ul>
-          <li><strong>1) Rims and Tyres:</strong> The primary interface transferring tractive, braking, and lateral forces to the track surface.</li>
-          <li><strong>2) Hubs and Uprights:</strong> Custom-machined structural assemblies housing the wheel bearings and mounting points for the brake calipers and control arms.</li>
-          <li><strong>3) Control Arms and Rods:</strong> Double wishbone carbon/steel linkages and push/pull rods that define the kinematic wheel travel and suspension geometry.</li>
-          <li><strong>4) Springs and Dampers:</strong> Coilover shock absorber units controlling vertical wheel motion, ride height, and transient weight transfer.</li>
-          <li><strong>5) Anti-Roll Bars &amp; Steering:</strong> Torsion bar linkages controlling body roll stiffness during cornering, paired with a rack-and-pinion steering assembly to convert driver input into front wheel steer angles.</li>
-          <li><strong>6) Brakes:</strong> Floating wave rotors and hydraulic calipers mounted to the front and rear hub assemblies.</li>
+        <figure class="suspension-viewer" data-suspension-viewer>
+          <div class="sv-stage">
+            <img class="sv-poster" src="assets/r27e_suspension.png" alt="CAD overview of the R27e front and rear suspension assemblies with wheels.">
+            <div class="sv-labels"></div>
+            <div class="sv-tooltip" hidden></div>
+            <div class="sv-controls">
+              <div class="sv-views" role="group" aria-label="Assembly view">
+                <button type="button" data-view="all" aria-pressed="true" disabled>Both</button>
+                <button type="button" data-view="front" aria-pressed="false" disabled>Front</button>
+                <button type="button" data-view="rear" aria-pressed="false" disabled>Rear</button>
+              </div>
+              <button type="button" data-reset disabled>Reset view</button>
+            </div>
+            <div class="sv-status" role="status"></div>
+          </div>
+          <figcaption><strong>Figure 1: Interactive CAD model</strong> of the R27e front and rear suspension, labelled by part. Drag to rotate, scroll to zoom, right-click and drag to pan. Hover over or tap a label, a part or a subsystem below to highlight it.</figcaption>
+        </figure>
+        <ul class="sv-legend" aria-label="Suspension subsystems">
+          <li><button type="button" data-sv-subsystem="wheels"><strong>1) Rims and Tyres</strong><span>The primary interface transferring tractive, braking, and lateral forces to the track surface.</span></button></li>
+          <li><button type="button" data-sv-subsystem="hubs"><strong>2) Hubs and Uprights</strong><span>Custom-machined structural assemblies housing the wheel bearings and mounting points for the brake calipers and control arms.</span></button></li>
+          <li><button type="button" data-sv-subsystem="arms"><strong>3) Control Arms and Rods</strong><span>Double wishbone carbon/steel linkages and push/pull rods that define the kinematic wheel travel and suspension geometry.</span></button></li>
+          <li><button type="button" data-sv-subsystem="dampers"><strong>4) Springs and Dampers</strong><span>Coilover shock absorber units controlling vertical wheel motion, ride height, and transient weight transfer.</span></button></li>
+          <li><button type="button" data-sv-subsystem="arbsteer"><strong>5) Anti-Roll Bars &amp; Steering</strong><span>Torsion bar linkages controlling body roll stiffness during cornering, paired with a rack-and-pinion steering assembly to convert driver input into front wheel steer angles.</span></button></li>
+          <li><button type="button" data-sv-subsystem="brakes"><strong>6) Brakes</strong><span>Floating wave rotors and hydraulic calipers mounted to the front and rear hub assemblies.</span></button></li>
         </ul>
-        <figure class="report-figure" id="r27e-suspension">
+        <figure class="report-figure sv-print" id="r27e-suspension">
           <img src="assets/r27e_suspension.png" alt="CAD overview of the R27e front and rear suspension assemblies with wheels." loading="lazy">
-          <figcaption>Figure 1: R27e front and rear suspension CAD assemblies. Source: 27 Suspension, slide 3.</figcaption>
+          <figcaption>Figure 1: R27e front and rear suspension CAD assemblies. Source: 27 Suspension, slide 3. The online report includes an interactive 3D model.</figcaption>
         </figure>
       </div>
 
@@ -398,4 +416,5 @@
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <dialog class="figure-lightbox" aria-label="Enlarged report figure"><div class="lightbox-panel"><button class="lightbox-close" type="button" aria-label="Close enlarged figure">×</button><img alt=""><p class="lightbox-caption"></p></div></dialog>
 <script src="report.js"></script>
+<script type="module" src="components/suspension/viewer.js"></script>
 </body></html>
