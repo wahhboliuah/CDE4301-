@@ -1,0 +1,58 @@
+name: Publish password-protected report
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # Public repositories expose the unencrypted source and its history.
+    if: github.event.repository.private == true || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require a private source repository
+        env:
+          REPOSITORY_PRIVATE: ${{ github.event.repository.private }}
+        run: |
+          if [ "$REPOSITORY_PRIVATE" != "true" ]; then
+            echo "::error::Make this repository private before enabling password protection. Public source files bypass the password."
+            exit 1
+          fi
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install pinned encryption dependency
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Encrypt report and all referenced images
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.REPORT_PASSWORD }}
+        run: npm run build:protected
+      - name: Upload only encrypted output
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy encrypted site
+        id: deployment
+        uses: actions/deploy-pages@v4

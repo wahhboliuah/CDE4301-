@@ -1,0 +1,11 @@
+{
+  "name": "cde4301-report",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:protected": "python3 scripts/build_protected.py"
+  },
+  "devDependencies": {
+    "staticrypt": "3.5.4"
+  }
+}
