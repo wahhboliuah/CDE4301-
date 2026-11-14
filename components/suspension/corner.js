@@ -11,8 +11,8 @@ const LABELS = [
   { name: 'Brake rotor',   group: 'brakes', match: /Rear Brake Rotor/,       at: [1, 0.78, 0.12], surface: [0, 1, 0.35] },
   { name: 'Brake caliper', group: 'brakes', match: /Rear brake caliper/,     at: [1, 0.5, 0.5] },
   { name: 'Brake button',  group: 'brakes', match: /Brake Floating Button/,  at: [1, 0.5, 0.5], pick: 'top' },
-  { name: 'Hub',           group: 'hubs',   match: /Rear Left Hub/,          at: [1, 0.22, 0.5] },
-  { name: 'Wheel locknut', group: 'hubs',   match: /Wheel Lock Nut/,         at: [1, 0.5, 0.5] },
+  { name: 'Hub',           group: 'hubs',   match: /Rear Left Hub/,          at: [1, 0.22, 0.5], surface: [0.35, 1, 0] },
+  { name: 'Wheel locknut', group: 'hubs',   match: /Wheel Lock Nut/,         at: [1, 0.5, 0.5], surface: [1, 0.45, 0.2] },
   { name: 'Upright',       group: 'hubs',   match: /Rear Left Upright/,      at: [0.5, 0.97, 0.5], surface: [0.3, 1, 0] }
 ];
 
@@ -65,7 +65,7 @@ function setup(host) {
         let p = o; while (p && !p.userData.partName) p = p.parent;
         const ud = p ? p.userData : {};
         const c = new THREE.Box3().setFromObject(o).getCenter(new THREE.Vector3());
-        if (ud.section === 'rear' && c.x > 0.36 && ['hubs', 'brakes', 'hardware'].includes(ud.group) && !/WSS|Wheel Speed|ELPM|Potentiometer|G Sensor/i.test(ud.partName || '')) {
+        if (ud.section === 'rear' && c.x > 0.36 && ['hubs', 'brakes', 'hardware'].includes(ud.group) && !/WSS|Wheel Speed|ELPM|Potentiometer|G Sensor|Rubber Gasket/i.test(ud.partName || '')) {
           o.userData = { ...ud, ...o.userData };
           keep.push(o);
         }
