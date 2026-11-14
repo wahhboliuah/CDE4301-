@@ -22,7 +22,7 @@
           Within the NUS Formula SAE organizational structure, the vehicle development is divided into two primary branches: Powertrain (Accumulator, Tractive, Low Voltage, and High Voltage) and Chassis (Aerodynamics, Frame, Vehicle Dynamics Suspension, and Vehicle Dynamics Laptime Simulation), alongside Future Systems development. The primary objective of the suspension system is to keep the tyres at an optimal angle relative to the ground to maximize all driving forces acting on the racecar.
         </p>
         <p>
-          <strong>Project objective and scope.</strong> This project designs the R27e brake system and the brake corner components it depends on (upright, hub and brake rotor). It has two objectives. The first is to minimise mass: a corner assembly under 1.20 kg, lighter than R26, that can still lock all four wheels. The second is to keep the brakes in their operating temperature window. Pad friction depends on temperature [2], so the brakes should warm up quickly, which a lower rotor mass helps, and then stay below the 350 °C limit through Endurance. R26's rotors reached about 500 °C. The two objectives pull against each other, because a lighter rotor stores less heat and runs hotter. Resolving this needs a design method that predicts rotor cooling (Section 5.2). Hydraulic sizing, rotor design, and structural and thermal validation are in scope. Suspension geometry and the regenerative braking control strategy are outside the scope, apart from making the hydraulic system work alongside regenerative braking.
+          <strong>Project objective and scope.</strong> This project designs the R27e brake system and the brake corner components it depends on (upright, hub and brake rotor). It has two objectives. The first is to minimise mass: a rear corner assembly under 1.20 kg, 18% lighter than R26’s 1.47 kg, that can still lock all four wheels. The second is to keep the brakes in their operating temperature window. Pad friction depends on temperature [2], so the brakes should warm up quickly, which a lower rotor mass helps, and then stay below the 350 °C limit through Endurance. R26's rotors reached about 500 °C. The two objectives pull against each other, because a lighter rotor stores less heat and runs hotter. Resolving this needs a design method that predicts rotor cooling (Section 5.2). Hydraulic sizing, rotor design, and structural and thermal validation are in scope. Suspension geometry and the regenerative braking control strategy are outside the scope, apart from making the hydraulic system work alongside regenerative braking.
         </p>
       </div>
 
@@ -149,9 +149,9 @@
               <td>Ensure optimal brake balance of the car and full 4-wheel lock-up capability.</td>
             </tr>
             <tr>
-              <td>Corner Assembly Mass</td>
+              <td>Rear Corner Assembly Mass</td>
               <td><strong>Less than 1.20 kg</strong></td>
-              <td>Achieves an 18% mass reduction compared to the prior year's assembly.</td>
+              <td>18% lighter than the R26 rear corner (1.47 kg; Appendix A.8).</td>
             </tr>
             <tr>
               <td>Operating Front Rotor Temp</td>
@@ -628,6 +628,23 @@
             <tr><td>Rear axle total; at the motor (3.4 : 1 reduction)</td><td>23.3 Nm; <strong>6.8 Nm</strong></td></tr>
           </tbody>
         </table>
+      </div>
+      <div id="appendix-mass">
+        <h3>A.8. R26 Rear Corner Mass Baseline</h3>
+        <p>The mass target is measured against the weighed R26 rear components, per corner (half of each car-set total):</p>
+        <table class="data-table">
+          <thead><tr><th>Component</th><th>R26 car set (g)</th><th>Per rear corner (g)</th></tr></thead>
+          <tbody>
+            <tr><td>Rear upright (×2)</td><td>738.80</td><td>369.40</td></tr>
+            <tr><td>Rear hub (×2)</td><td>718.82</td><td>359.41</td></tr>
+            <tr><td>Rear wheel bearings (×4)</td><td>768.00</td><td>384.00</td></tr>
+            <tr><td>Rear rotor (×2)</td><td>511.80</td><td>255.90</td></tr>
+            <tr><td>Tripod liners (×6)</td><td>145.62</td><td>72.81</td></tr>
+            <tr><td>Preload plate (×2)</td><td>57.94</td><td>28.97</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>2,940.98</strong></td><td><strong>1,470.49</strong></td></tr>
+          </tbody>
+        </table>
+        <p>A 1.20 kg target is therefore a reduction of 1 − 1,200 / 1,470.5 = <strong>18.4%</strong>.</p>
       </div>
     <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-5.html" data-page="section-5.html">← Previous chapter</a><a href="?page=all" data-page="all">Read the full report →</a></nav></article>
 
