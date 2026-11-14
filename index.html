@@ -12,6 +12,7 @@
 <div class="sidebar-top"><a class="sidebar-brand" href="?page=section-1.html" data-page="section-1.html">CDE4301 · FYP Report</a><button class="mobile-nav-toggle" type="button" aria-controls="report-navigation" aria-expanded="false">Contents ☰</button></div>
 <nav id="report-navigation" aria-label="Table of contents"><h2>Table of contents</h2>
 <div class="nav-group"><div class="nav-chapter"><a href="?page=section-1.html" data-page="section-1.html">1. FSAE Overview &amp; Competition Goals</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-1" aria-label="Toggle subsections for chapter 1">⌄</button></div><ul id="nav-1"><li><a href="?page=section-1.html&amp;anchor=sub-section-architecture" data-page="section-1.html" data-anchor="sub-section-architecture">1.1. R27e Suspension Architecture &amp; Subsystems</a></li><li><a href="?page=section-1.html&amp;anchor=sub-section-targets" data-page="section-1.html" data-anchor="sub-section-targets">1.2. Team Competition Targets &amp; System Goals</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-2.html" data-page="section-2.html">2. Brake System Problem Statement &amp; Objectives</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-2" aria-label="Toggle subsections for chapter 2">⌄</button></div><ul id="nav-2"><li><a href="?page=section-2.html&amp;anchor=sub-section-bottlenecks" data-page="section-2.html" data-anchor="sub-section-bottlenecks">2.1. Thermal Fade &amp; Unsprung Mass Penalties</a></li><li><a href="?page=section-2.html&amp;anchor=sub-section-specs" data-page="section-2.html" data-anchor="sub-section-specs">2.2. Design Specifications &amp; Optimization Methodology</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-3.html" data-page="section-3.html">3. First-Principles Brake System Calculations</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-3" aria-label="Toggle subsections for chapter 3">⌄</button></div><ul id="nav-3"><li><a href="?page=section-3.html&amp;anchor=sub-section-dynamics" data-page="section-3.html" data-anchor="sub-section-dynamics">3.1. Tire Capacity vs. Optimal Braking Force</a></li><li><a href="?page=section-3.html&amp;anchor=sub-section-sizing" data-page="section-3.html" data-anchor="sub-section-sizing">3.2. Force, Pressure &amp; Hardware Sizing</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-4.html" data-page="section-4.html">4. Structural &amp; Thermal FEA Analysis</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-4" aria-label="Toggle subsections for chapter 4">⌄</button></div><ul id="nav-4"><li><a href="?page=section-4.html&amp;anchor=sub-section-structural" data-page="section-4.html" data-anchor="sub-section-structural">4.1. Static Structural Analysis (Upright &amp; Assembly)</a></li><li><a href="?page=section-4.html&amp;anchor=sub-section-thermal" data-page="section-4.html" data-anchor="sub-section-thermal">4.2. Rotor Geometry &amp; Material Selection</a></li><li><a href="?page=section-4.html&amp;anchor=sub-section-sim-methodology" data-page="section-4.html" data-anchor="sub-section-sim-methodology">4.3. Simulation Constraints &amp; Multi-Angle Methodology</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-5.html" data-page="section-5.html">5. Problems, Shortcomings &amp; Project Plan</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-5" aria-label="Toggle subsections for chapter 5">⌄</button></div><ul id="nav-5"><li><a href="?page=section-5.html&amp;anchor=sub-section-roadmap" data-page="section-5.html" data-anchor="sub-section-roadmap">5.1. Problems Faced &amp; Proposed Resolutions</a></li><li><a href="?page=section-5.html&amp;anchor=sub-section-milestones" data-page="section-5.html" data-anchor="sub-section-milestones">5.2. Project Plan &amp; Milestones</a></li><li><a href="?page=section-5.html&amp;anchor=references" data-page="section-5.html" data-anchor="references">References</a></li></ul></div>
+<div class="nav-group"><div class="nav-chapter"><a href="?page=appendix-a.html" data-page="appendix-a.html">Appendix A. Brake Calculation Chain</a></div></div>
 <div class="sidebar-actions"><a href="?page=all" data-page="all">Read full report</a><button type="button" id="print-report">Print / Save PDF</button></div>
 <p class="sidebar-footnote">Suspension &amp; Brakes<br>NUS Formula SAE</p></nav></aside>
 <main class="content" id="report-content" tabindex="-1">
@@ -197,7 +198,7 @@
       <div id="sub-section-sizing">
         <h3>3.2. Force, Pressure &amp; Hardware Sizing</h3>
         <p>
-          From the 1.50 G limit, the forces, torques and line pressures were calculated per wheel, and the master cylinders were sized (wheel torque uses the 0.197 m rolling radius):
+          From the 1.50 G limit, the forces, torques and line pressures were calculated per wheel, and the master cylinders were sized (wheel torque uses the 0.197 m rolling radius). The full working is in <a href="?page=appendix-a.html" data-page="appendix-a.html">Appendix A</a>.
         </p>
         <table class="data-table">
           <thead>
@@ -490,7 +491,115 @@
           <li>Tech Steel &amp; Materials. <em>Stainless Steel 17-4PH: Physical Properties</em>. Thermal conductivity.</li>
         </ol>
       </div>
-    <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-4.html" data-page="section-4.html">← Previous chapter</a><a href="?page=all" data-page="all">Read the full report →</a></nav></article>
+    <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-4.html" data-page="section-4.html">← Previous chapter</a><a href="?page=appendix-a.html" data-page="appendix-a.html">Appendix A →</a></nav></article>
+<article class="chapter appendix" data-chapter="appendix-a.html" hidden><div id="appendix-a">
+        <h2>Appendix A. Brake Calculation Chain</h2>
+        <p>
+          This appendix sets out the full working behind Section 3, from tyre data to pedal force. All values are per wheel unless stated otherwise, and are taken from the <em>27 Brakes Calculations</em> workbook (V4, sheet “Tire Forces (new)”). The appendix is excluded from the word count.
+        </p>
+      </div>
+
+      <div id="appendix-inputs">
+        <h3>A.1. Inputs</h3>
+        <table class="data-table">
+          <thead><tr><th>Parameter</th><th>Symbol</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Car mass with driver</td><td><var>m</var></td><td>260 kg</td></tr>
+            <tr><td>Static front weight fraction</td><td><var>w</var><sub>f</sub></td><td>0.5038</td></tr>
+            <tr><td>Wheelbase / CG height</td><td><var>L</var> / <var>h</var></td><td>1,558 mm / 300 mm</td></tr>
+            <tr><td>Effective rolling radius (diameter 394 mm)</td><td><var>r</var><sub>w</sub></td><td>197 mm</td></tr>
+            <tr><td>Tyre</td><td></td><td>Hoosier 18.0×6.0-10 R20 (TTC data, scaled by 2/3)</td></tr>
+            <tr><td>Front caliper: ISR 22-048, opposed 4-piston</td><td><var>A</var><sub>p,f</sub></td><td>4 × Ø25 mm pistons (490.9 mm² each)</td></tr>
+            <tr><td>Rear caliper: AP CP4226-2S0, opposed 2-piston</td><td><var>A</var><sub>p,r</sub></td><td>2 × Ø25.4 mm pistons (506.7 mm² each)</td></tr>
+            <tr><td>Pad friction coefficient, front / rear</td><td><var>μ</var><sub>f</sub> / <var>μ</var><sub>r</sub></td><td>0.60 / 0.55</td></tr>
+            <tr><td>Rotor outer diameter, front / rear; pad swept height</td><td></td><td>190.75 mm / 172 mm; 25 mm</td></tr>
+            <tr><td>Effective rotor radius, front / rear</td><td><var>r</var><sub>e</sub></td><td>82.9 mm / 73.5 mm</td></tr>
+            <tr><td>Master cylinder bore, front / rear</td><td><var>D</var><sub>f</sub> / <var>D</var><sub>r</sub></td><td>15.88 mm / 25.4 mm</td></tr>
+            <tr><td>Pedal ratio; bias bar length</td><td><var>i</var><sub>p</sub></td><td>4 : 1; 2.6 in (front force share range 0.41–0.59)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="appendix-loads">
+        <h3>A.2. Tyre Loads and Capacity</h3>
+        <p>Normal load on each wheel at deceleration <var>G</var>, including longitudinal weight transfer:</p>
+        <p class="eq"><var>F</var><sub>z,f</sub> = ½ [ <var>m g w</var><sub>f</sub> + <var>m G g h</var> / <var>L</var> ],&nbsp;&nbsp;&nbsp; <var>F</var><sub>z,r</sub> = ½ [ <var>m g</var> (1 − <var>w</var><sub>f</sub>) − <var>m G g h</var> / <var>L</var> ]</p>
+        <p>Peak longitudinal tyre force is a cubic least-squares fit to the TTC data (50 points, 0–2,000 N), scaled by 2/3 for the difference between the test surface and a real track:</p>
+        <p class="eq"><var>F</var><sub>x,max</sub> = ⅔ ( <var>a</var><sub>3</sub><var>F</var><sub>z</sub>³ + <var>a</var><sub>2</sub><var>F</var><sub>z</sub>² + <var>a</var><sub>1</sub><var>F</var><sub>z</sub> + <var>a</var><sub>0</sub> ),&nbsp;&nbsp; <var>a</var><sub>3</sub> = −2.019×10⁻⁷, <var>a</var><sub>2</sub> = 3.503×10⁻⁴, <var>a</var><sub>1</sub> = 2.119, <var>a</var><sub>0</sub> = −5.977</p>
+      </div>
+
+      <div id="appendix-limit">
+        <h3>A.3. Friction-Limited Deceleration</h3>
+        <p>Goal Seek finds the deceleration at which the front and rear tyres together supply exactly the force required for one side of the car:</p>
+        <p class="eq"><var>F</var><sub>x,max</sub>(<var>F</var><sub>z,f</sub>) + <var>F</var><sub>x,max</sub>(<var>F</var><sub>z,r</sub>) = ½ <var>m G g</var></p>
+        <table class="data-table">
+          <thead><tr><th>Quantity</th><th>Front</th><th>Rear</th></tr></thead>
+          <tbody>
+            <tr><td>Normal load at the limit</td><td>1,009.8 N</td><td>265.5 N</td></tr>
+            <tr><td>Braking force (= tyre capacity)</td><td>1,522.3 N</td><td>385.1 N</td></tr>
+            <tr><td>Result</td><td colspan="2"><strong><var>G</var> = 1.496</strong>; total per side 1,907.4 N; front share 0.80</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="appendix-hydraulics">
+        <h3>A.4. Torque, Caliper Force and Line Pressure</h3>
+        <p>Each wheel's braking force gives the brake torque, then the tangential force at the rotor's effective radius. For an opposed caliper with <var>n</var> pistons, every piston pushes one pad face, so <var>F</var><sub>t</sub> = <var>n μ p A</var><sub>p</sub>:</p>
+        <p class="eq"><var>T</var> = <var>F</var><sub>x</sub> <var>r</var><sub>w</sub>,&nbsp;&nbsp;&nbsp; <var>F</var><sub>t</sub> = <var>T</var> / <var>r</var><sub>e</sub>,&nbsp;&nbsp;&nbsp; <var>p</var> = <var>F</var><sub>t</sub> / (<var>n μ A</var><sub>p</sub>)</p>
+        <table class="data-table">
+          <thead><tr><th>Step</th><th>Front</th><th>Rear</th></tr></thead>
+          <tbody>
+            <tr><td>Brake torque <var>T</var></td><td>1,522.3 × 0.197 = 299.9 Nm</td><td>385.1 × 0.197 = 75.9 Nm</td></tr>
+            <tr><td>Tangential force at caliper <var>F</var><sub>t</sub></td><td>299.9 / 0.0829 = 3,618.6 N</td><td>75.9 / 0.0735 = 1,032.2 N</td></tr>
+            <tr><td>Clamp force per piston <var>F</var><sub>t</sub> / (<var>n μ</var>)</td><td>3,618.6 / (4 × 0.60) = 1,507.7 N</td><td>1,032.2 / (2 × 0.55) = 938.4 N</td></tr>
+            <tr><td>Line pressure <var>p</var></td><td>1,507.7 / 490.9 mm² = <strong>3.07 MPa</strong></td><td>938.4 / 506.7 mm² = <strong>1.85 MPa</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="appendix-mc">
+        <h3>A.5. Master Cylinders, Bias Bar and Pedal Force</h3>
+        <p>The bias bar splits the pushrod force between the master cylinders, and each cylinder's pressure is that force divided by its bore area. For the brake test the bar is set rear-biased (front share 0.41, rear 0.59), so the bore area ratio needed is:</p>
+        <p class="eq"><var>A</var><sub>r</sub> / <var>A</var><sub>f</sub> = (0.59 / 0.41) × (<var>p</var><sub>f</sub> / <var>p</var><sub>r</sub>) = 1.430 × (3.07 / 1.85) = 2.37 &nbsp;⇒&nbsp; <var>D</var><sub>r</sub> = 15.88 × √2.37 = 24.5 mm → 25.4 mm (1 in) standard bore</p>
+        <table class="data-table">
+          <thead><tr><th>Step</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Front pushrod force <var>p</var><sub>f</sub><var>A</var><sub>f</sub> (198.1 mm²)</td><td>608.3 N</td></tr>
+            <tr><td>Rear pushrod force <var>p</var><sub>r</sub><var>A</var><sub>r</sub> (506.7 mm²)</td><td>938.4 N</td></tr>
+            <tr><td>Total pushrod force; driver pedal force at 4 : 1</td><td>1,546.7 N; <strong>386.7 N</strong></td></tr>
+            <tr><td>Bias bar setting needed (front share)</td><td>0.393, slightly beyond the bar's 0.41 limit (see Section 5.1)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="appendix-stroke">
+        <h3>A.6. Master Cylinder Stroke</h3>
+        <p>Caliper piston travel is taken as 0.4 mm (0.2 mm seal rollback plus 0.2 mm high-pressure compliance, assumed). Master cylinder stroke is that travel multiplied by the ratio of total caliper piston area to bore area, plus 1.5 mm port dead stroke (assumed):</p>
+        <table class="data-table">
+          <thead><tr><th>Step</th><th>Front</th><th>Rear</th></tr></thead>
+          <tbody>
+            <tr><td>Area ratio</td><td>8 × 490.9 / 198.1 = 19.83</td><td>4 × 506.7 / 506.7 = 4.00</td></tr>
+            <tr><td>Active stroke</td><td>0.4 × 19.83 = 7.93 mm</td><td>0.4 × 4.00 = 1.60 mm</td></tr>
+            <tr><td>Total stroke</td><td>9.43 mm</td><td>3.10 mm</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="appendix-regen">
+        <h3>A.7. Regenerative Braking Requirement</h3>
+        <p>The brake test is run with the tractive system off, so the hydraulic system alone is sized to lock all four wheels. In racing the bias bar is moved to 50/50 and regenerative braking makes up the rear torque. At 50/50 the rear master cylinder receives the front pushrod force (608.3 N), and with equal rear bore and piston areas this is also the clamp force per rear piston:</p>
+        <p class="eq"><var>T</var><sub>r,mech</sub> = 608.3 × 2 × 0.55 × 0.0735 = 49.2 Nm</p>
+        <table class="data-table">
+          <thead><tr><th>Step</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Rear torque required per wheel</td><td>75.9 Nm</td></tr>
+            <tr><td>Regenerative torque per rear wheel</td><td>75.9 − 49.2 = 26.7 Nm</td></tr>
+            <tr><td>Rear axle total; at the motor (3.4 : 1 reduction)</td><td>53.4 Nm; <strong>15.7 Nm</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-5.html" data-page="section-5.html">← Previous chapter</a><a href="?page=all" data-page="all">Read the full report →</a></nav></article>
+
 <noscript><p>Enable JavaScript to use chapter navigation. All chapters are shown below.</p><style>.chapter[hidden]{display:block!important}</style></noscript>
 </main>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
