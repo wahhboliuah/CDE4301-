@@ -21,7 +21,19 @@ Callout labels name the key parts and are coloured by subsystem. To add, rename 
 
 To replace the model, export the assembly from SolidWorks as glTF/GLB (for example with a glTF exporter add-in, or via STEP into Blender), keep the part names, and save it over `assets/models/r27e-suspension.glb`.
 
-## Password protection
+## Password screen
+
+The site opens with a password screen (`components/password-gate/`). Only a SHA-256 hash of the password is stored, and the password is not case sensitive. Once entered, it stays unlocked until the browser tab is closed.
+
+This screen only stops casual visitors. The repository is public, so anyone can still read the report files on GitHub. For real protection, follow the password protection section below.
+
+To change the password, run `python3 -c "import hashlib;print(hashlib.sha256('NEWPASSWORD'.encode()).hexdigest())"` with the new password in capitals, then paste the result into `PASSWORD_HASH` in `components/password-gate/gate.js`.
+
+## Word count
+
+Run `python3 scripts/word_count.py` to check the report against the 3,000-word limit. It counts chapter text, tables and captions. It excludes navigation, the References list, and any section marked `class="appendix"`.
+
+## Password protection (encrypted, optional)
 
 **Password protection requires setup. The presence of a workflow file does not mean the current website is protected.** Follow [PASSWORD_SETUP.md](PASSWORD_SETUP.md).
 

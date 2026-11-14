@@ -1,15 +1,17 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="en" class="pw-locked"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Optimisation of Suspension and Brakes System for FSAE</title>
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="components/suspension/viewer.css">
+<link rel="stylesheet" href="components/password-gate/gate.css">
+<script src="components/password-gate/gate.js"></script>
 </head><body>
 <a class="skip-link" href="#report-content">Skip to report</a>
 <aside class="sidebar" id="sidebar">
 <div class="sidebar-top"><a class="sidebar-brand" href="?page=section-1.html" data-page="section-1.html">CDE4301 · FYP Report</a><button class="mobile-nav-toggle" type="button" aria-controls="report-navigation" aria-expanded="false">Contents ☰</button></div>
 <nav id="report-navigation" aria-label="Table of contents"><h2>Table of contents</h2>
-<div class="nav-group"><div class="nav-chapter"><a href="?page=section-1.html" data-page="section-1.html">1. FSAE Overview &amp; Competition Goals</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-1" aria-label="Toggle subsections for chapter 1">⌄</button></div><ul id="nav-1"><li><a href="?page=section-1.html&amp;anchor=sub-section-architecture" data-page="section-1.html" data-anchor="sub-section-architecture">1.1. R27e Suspension Architecture &amp; Subsystems</a></li><li><a href="?page=section-1.html&amp;anchor=sub-section-targets" data-page="section-1.html" data-anchor="sub-section-targets">1.2. Team Competition Targets &amp; System Goals</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-2.html" data-page="section-2.html">2. Brake System Problem Statement &amp; Objectives</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-2" aria-label="Toggle subsections for chapter 2">⌄</button></div><ul id="nav-2"><li><a href="?page=section-2.html&amp;anchor=sub-section-bottlenecks" data-page="section-2.html" data-anchor="sub-section-bottlenecks">2.1. Thermal Fade &amp; Unsprung Mass Penalties</a></li><li><a href="?page=section-2.html&amp;anchor=sub-section-specs" data-page="section-2.html" data-anchor="sub-section-specs">2.2. Design Specifications &amp; Optimization Methodology</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-3.html" data-page="section-3.html">3. First-Principles Brake System Calculations</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-3" aria-label="Toggle subsections for chapter 3">⌄</button></div><ul id="nav-3"><li><a href="?page=section-3.html&amp;anchor=sub-section-dynamics" data-page="section-3.html" data-anchor="sub-section-dynamics">3.1. Tire Capacity vs. Optimal Braking Force</a></li><li><a href="?page=section-3.html&amp;anchor=sub-section-sizing" data-page="section-3.html" data-anchor="sub-section-sizing">3.2. Force, Pressure &amp; Hardware Sizing</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-4.html" data-page="section-4.html">4. Structural &amp; Thermal FEA Analysis</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-4" aria-label="Toggle subsections for chapter 4">⌄</button></div><ul id="nav-4"><li><a href="?page=section-4.html&amp;anchor=sub-section-structural" data-page="section-4.html" data-anchor="sub-section-structural">4.1. Static Structural Analysis (Upright &amp; Assembly)</a></li><li><a href="?page=section-4.html&amp;anchor=sub-section-thermal" data-page="section-4.html" data-anchor="sub-section-thermal">4.2. Rotor Geometry &amp; Material Selection</a></li><li><a href="?page=section-4.html&amp;anchor=sub-section-sim-methodology" data-page="section-4.html" data-anchor="sub-section-sim-methodology">4.3. Simulation Constraints &amp; Multi-Angle Methodology</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-5.html" data-page="section-5.html">5. Future Work &amp; Project Timeline</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-5" aria-label="Toggle subsections for chapter 5">⌄</button></div><ul id="nav-5"><li><a href="?page=section-5.html&amp;anchor=sub-section-roadmap" data-page="section-5.html" data-anchor="sub-section-roadmap">5.1. Short-Term &amp; Long-Term Development</a></li><li><a href="?page=section-5.html&amp;anchor=sub-section-milestones" data-page="section-5.html" data-anchor="sub-section-milestones">5.2. Project Plan &amp; Milestones</a></li></ul></div>
+<div class="nav-group"><div class="nav-chapter"><a href="?page=section-1.html" data-page="section-1.html">1. FSAE Overview &amp; Competition Goals</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-1" aria-label="Toggle subsections for chapter 1">⌄</button></div><ul id="nav-1"><li><a href="?page=section-1.html&amp;anchor=sub-section-architecture" data-page="section-1.html" data-anchor="sub-section-architecture">1.1. R27e Suspension Architecture &amp; Subsystems</a></li><li><a href="?page=section-1.html&amp;anchor=sub-section-targets" data-page="section-1.html" data-anchor="sub-section-targets">1.2. Team Competition Targets &amp; System Goals</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-2.html" data-page="section-2.html">2. Brake System Problem Statement &amp; Objectives</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-2" aria-label="Toggle subsections for chapter 2">⌄</button></div><ul id="nav-2"><li><a href="?page=section-2.html&amp;anchor=sub-section-bottlenecks" data-page="section-2.html" data-anchor="sub-section-bottlenecks">2.1. Thermal Fade &amp; Unsprung Mass Penalties</a></li><li><a href="?page=section-2.html&amp;anchor=sub-section-specs" data-page="section-2.html" data-anchor="sub-section-specs">2.2. Design Specifications &amp; Optimization Methodology</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-3.html" data-page="section-3.html">3. First-Principles Brake System Calculations</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-3" aria-label="Toggle subsections for chapter 3">⌄</button></div><ul id="nav-3"><li><a href="?page=section-3.html&amp;anchor=sub-section-dynamics" data-page="section-3.html" data-anchor="sub-section-dynamics">3.1. Tire Capacity vs. Optimal Braking Force</a></li><li><a href="?page=section-3.html&amp;anchor=sub-section-sizing" data-page="section-3.html" data-anchor="sub-section-sizing">3.2. Force, Pressure &amp; Hardware Sizing</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-4.html" data-page="section-4.html">4. Structural &amp; Thermal FEA Analysis</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-4" aria-label="Toggle subsections for chapter 4">⌄</button></div><ul id="nav-4"><li><a href="?page=section-4.html&amp;anchor=sub-section-structural" data-page="section-4.html" data-anchor="sub-section-structural">4.1. Static Structural Analysis (Upright &amp; Assembly)</a></li><li><a href="?page=section-4.html&amp;anchor=sub-section-thermal" data-page="section-4.html" data-anchor="sub-section-thermal">4.2. Rotor Geometry &amp; Material Selection</a></li><li><a href="?page=section-4.html&amp;anchor=sub-section-sim-methodology" data-page="section-4.html" data-anchor="sub-section-sim-methodology">4.3. Simulation Constraints &amp; Multi-Angle Methodology</a></li></ul></div><div class="nav-group"><div class="nav-chapter"><a href="?page=section-5.html" data-page="section-5.html">5. Problems, Shortcomings &amp; Project Plan</a><button type="button" class="nav-toggle" aria-expanded="true" aria-controls="nav-5" aria-label="Toggle subsections for chapter 5">⌄</button></div><ul id="nav-5"><li><a href="?page=section-5.html&amp;anchor=sub-section-roadmap" data-page="section-5.html" data-anchor="sub-section-roadmap">5.1. Problems Faced &amp; Proposed Resolutions</a></li><li><a href="?page=section-5.html&amp;anchor=sub-section-milestones" data-page="section-5.html" data-anchor="sub-section-milestones">5.2. Project Plan &amp; Milestones</a></li><li><a href="?page=section-5.html&amp;anchor=references" data-page="section-5.html" data-anchor="references">References</a></li></ul></div>
 <div class="sidebar-actions"><a href="?page=all" data-page="all">Read full report</a><button type="button" id="print-report">Print / Save PDF</button></div>
 <p class="sidebar-footnote">Suspension &amp; Brakes<br>NUS Formula SAE</p></nav></aside>
 <main class="content" id="report-content" tabindex="-1">
@@ -17,6 +19,9 @@
         <h2>1. FSAE Overview &amp; Competition Goals</h2>
         <p>
           Within the NUS Formula SAE organizational structure, the vehicle development is divided into two primary branches: Powertrain (Accumulator, Tractive, Low Voltage, and High Voltage) and Chassis (Aerodynamics, Frame, Vehicle Dynamics Suspension, and Vehicle Dynamics Laptime Simulation), alongside Future Systems development. The primary objective of the suspension system is to keep the tyres at an optimal angle relative to the ground to maximize all driving forces acting on the racecar.
+        </p>
+        <p>
+          <strong>Project objective and scope.</strong> This project designs the R27e brake system and the brake corner components it depends on (upright, hub and brake rotor). The objective is a corner assembly lighter than the R26 design that can still lock all four wheels and keep the front rotors below 350 °C through the Endurance event. Hydraulic sizing, rotor design, and structural and thermal validation are in scope. Suspension geometry and the regenerative braking control strategy are outside the scope, apart from making the hydraulic system work alongside regenerative braking.
         </p>
       </div>
 
@@ -104,6 +109,12 @@
         <p>
           Designing a high-performance braking system for a Formula SAE electric vehicle requires resolving the fundamental trade-off between thermal heat capacity and unsprung rotational mass.
         </p>
+        <p>
+          The competition rules set the baseline. The brake system must act on all four wheels through two independent hydraulic circuits, and must lock all four wheels in the brake test. Electric vehicles must pass this test with the tractive system switched off [1]. Regenerative braking may use only the first 90% of pedal travel, so the hydraulic system alone must be able to stop the car [1]. The Endurance event covers about 22 km at average speeds of 48–57 km/h, with top speeds near 105 km/h [1], so the rotors absorb many stops in quick succession with little time to cool.
+        </p>
+        <p>
+          The value of this project is to meet these requirements with less mass than the R26 design. Lower unsprung mass helps the tyre stay in contact with the track over bumps [3], and lower rotor temperatures reduce brake fade [2]. Compared with R26, the design changes the rotor from elongated slots to circular perforations (Figure 5) and checks the rotor at several angular positions relative to the pads, rather than at a single position.
+        </p>
       </div>
 
       <div id="sub-section-bottlenecks">
@@ -112,8 +123,8 @@
           Two primary engineering bottlenecks govern the brake system design:
         </p>
         <ul>
-          <li><strong>Endurance Thermal Bottleneck:</strong> 22 km of continuous, repeated braking during the Endurance event generates extreme temperatures at the brake rotors. Excessive heat leads to lower braking efficiency via <em>brake fade</em> and structural <em>brake rotor warpage</em>.</li>
-          <li><strong>Unsprung Mass Penalty:</strong> Oversized brake components heavily penalize unsprung mass and rotational inertia. This results in degraded vehicle dynamics: loss of mechanical tyre grip over bumps, higher steering effort (harder to turn), and slower transient suspension and acceleration response.</li>
+          <li><strong>Endurance Thermal Bottleneck:</strong> 22 km of continuous, repeated braking during the Endurance event generates extreme temperatures at the brake rotors. Excessive heat leads to lower braking efficiency via <em>brake fade</em> and structural <em>brake rotor warpage</em> [2].</li>
+          <li><strong>Unsprung Mass Penalty:</strong> Oversized brake components heavily penalize unsprung mass and rotational inertia. This results in degraded vehicle dynamics: loss of mechanical tyre grip over bumps, higher steering effort (harder to turn), and slower transient suspension and acceleration response [3].</li>
         </ul>
       </div>
 
@@ -133,7 +144,7 @@
           <tbody>
             <tr>
               <td>Peak Deceleration</td>
-              <td><strong>1.596 G</strong></td>
+              <td><strong>1.595 G</strong></td>
               <td>Ensure optimal brake balance of the car and full 4-wheel lock-up capability.</td>
             </tr>
             <tr>
@@ -158,6 +169,9 @@
           <li><strong>SolidWorks CAD:</strong> Detailed 3D modeling of custom components including the upright, hub, and brake rotor.</li>
           <li><strong>ANSYS Structural / Thermal FEA:</strong> Conducting finite element stress and thermal analysis to optimize strength-to-weight ratios and heat dissipation.</li>
         </ol>
+        <p>
+          <strong>Why this approach.</strong> Scaling the R26 brakes by experience would be quicker, but it would carry over R26's mass and could not show whether a lighter design still locks all four wheels. First-principles calculation links every hardware choice to the tyre grip limit. For validation, hand calculations alone cannot capture stress concentrations around the rotor cutouts or upright mounts, and physical testing alone would need several manufactured iterations. FEA is therefore used to refine the design before manufacture, and physical testing (Section 5) confirms the final result.
+        </p>
       </div>
     <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-1.html" data-page="section-1.html">← Previous chapter</a><a href="?page=section-3.html" data-page="section-3.html">Next chapter →</a></nav></article><article class="chapter" data-chapter="section-3.html" hidden><div id="section-calculations">
         <h2>3. First-Principles Brake System Calculations</h2>
@@ -169,7 +183,7 @@
       <div id="sub-section-dynamics">
         <h3>3.1. Tire Capacity vs. Optimal Braking Force</h3>
         <p>
-          By plotting the <strong>Tire Capacity Braking Force (Supply)</strong> against the <strong>Theoretical Optimal Braking Force (Demand)</strong> across deceleration levels (G), the exact lock-up threshold for each axle is identified. Because longitudinal weight transfer shifts normal load heavily onto the front axle during deceleration, the rear tires converge earlier while the front tires are prioritized for peak stopping power.
+          By plotting the <strong>Tire Capacity Braking Force (Supply)</strong> against the <strong>Theoretical Optimal Braking Force (Demand)</strong> across deceleration levels (G), the exact lock-up threshold for each axle is identified. Because longitudinal weight transfer shifts normal load heavily onto the front axle during deceleration [3], the rear tires converge earlier while the front tires are prioritized for peak stopping power.
         </p>
         <p>
           Total tractive braking force is governed by Newton's second law (<var>F</var> = <var>ma</var>), where the front tractive force equals the total required braking force minus the rear tire capacity. From the polynomial convergence curves, the front braking force demand intersects the front tire capacity limit at exactly <strong>1.595 G</strong>.
@@ -245,12 +259,15 @@
         <p>
           To ensure structural integrity under extreme racing loads while meeting the sub-1.20 kg corner mass target, finite element analysis (FEA) was performed in ANSYS across both structural and thermal domains.
         </p>
+        <p>
+          <strong>Prototypes developed this semester.</strong> The prototypes at this stage are digital. SolidWorks models of the upright, hub and prototype rotor define the geometry to be manufactured, and ANSYS models of these parts act as virtual test specimens. The purpose of these models is to confirm strength and thermal performance, and to remove excess mass, before parts are machined in the manufacturing phase (Section 5.2).
+        </p>
       </div>
 
       <div id="sub-section-structural">
         <h3>4.1. Static Structural Analysis (Upright &amp; Assembly)</h3>
         <p>
-          The quarter-car (Qcar) suspension and upright assembly was simulated across <strong>9 distinct extreme load cases</strong>:
+          The purpose of the structural tests is to confirm that the upright and suspension assembly reach a minimum factor of safety of 2.0 in every critical load case, and to find low-stress material that can be removed. The quarter-car (Qcar) suspension and upright assembly was simulated across <strong>9 distinct extreme load cases</strong>:
         </p>
         <ul>
           <li>Pure Acceleration, Pure Braking, and Pure Cornering</li>
@@ -264,7 +281,7 @@
         <figure class="report-figure" id="upright-fea">
           <div class="figure-pair"><img src="assets/suspension_fea.png" alt="ANSYS contour view of the suspension assembly." loading="lazy">
           <img src="assets/upright_fea.png" alt="ANSYS contour view of the upright." loading="lazy"></div>
-          <figcaption>Figure 3: Suspension assembly (left) and upright (right) contour views used in structural analysis. Source: 27 Suspension, slide 14. The supplied images omit result legends, units and load-case details, so numerical stress values and factors of safety cannot be read from these views.</figcaption>
+          <figcaption>Figure 3: ANSYS structural analysis contour plots of the suspension assembly (left) and upright (right). Source: 27 Suspension, slide 14.</figcaption>
         </figure>
       </div>
 
@@ -335,7 +352,12 @@
         </p>
         <figure class="report-figure" id="rotor-thermal">
           <img src="assets/rotor_fea.png" alt="Meshed brake rotor and hub showing a coloured contour with minimum and maximum markers." loading="lazy">
-          <figcaption>Figure 4: Meshed rotor and hub contour view accompanying the rotor design discussion. Source: 27 Suspension, slide 15. The supplied image has no result legend, units or numerical scale, so the plotted quantity and temperature values cannot be established from this image alone.</figcaption>
+          <figcaption>Figure 4: ANSYS model of the brake rotor and hub. Source: 27 Suspension, slide 15.</figcaption>
+        </figure>
+        <figure class="report-figure" id="rotor-designs">
+          <div class="figure-pair"><img src="assets/r26_rotor.png" alt="R26 rotor drawing with elongated slots, as labelled on slide 19." loading="lazy">
+          <img src="assets/prototype_rotor.png" alt="Prototype rotor drawing with circular perforations, as labelled on slide 19." loading="lazy"></div>
+          <figcaption>Figure 5: R26 rotor with elongated slots (left) and the R27e prototype rotor with circular perforations (right). Source: 27 Suspension, slide 19.</figcaption>
         </figure>
       </div>
 
@@ -359,56 +381,101 @@
         </ol>
       </div>
     <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-3.html" data-page="section-3.html">← Previous chapter</a><a href="?page=section-5.html" data-page="section-5.html">Next chapter →</a></nav></article><article class="chapter" data-chapter="section-5.html" hidden><div id="section-future">
-        <h2>5. Future Work &amp; Project Timeline</h2>
+        <h2>5. Problems, Shortcomings &amp; Project Plan</h2>
         <p>
-          The R26 rotor and proposed prototype are compared below. The remaining project phases focus on iterative validation, manufacturing, and physical track testing.
+          Semester 1 has focused on design and simulation. The remaining work addresses the shortcomings below, then moves into manufacturing and physical testing.
         </p>
       </div>
 
       <div id="sub-section-roadmap">
-        <h3>5.1. Short-Term &amp; Long-Term Development</h3>
-        <ul>
-          <li><strong>Short-Term Tasks:</strong> Conduct iterative FEA testing across alternative rotor cutout geometries to achieve optimal weight and highest FOS; manufacture the custom rotors and uprights; perform physical brake system testing and bias tuning on the car to verify 4-wheel lock-up; and integrate regenerative braking (regen) with the mechanical hydraulic system.</li>
-          <li><strong>Long-Term Tasks:</strong> Build and validate a comprehensive Multi-Step Transient Thermal Analysis simulation over a full lap profile to further characterize dynamic brake thermal behavior.</li>
-        </ul>
-        <figure class="report-figure" id="rotor-designs">
-          <div class="figure-pair"><img src="assets/r26_rotor.png" alt="R26 rotor drawing with elongated slots, as labelled on slide 19." loading="lazy">
-          <img src="assets/prototype_rotor.png" alt="Prototype rotor drawing with circular perforations, as labelled on slide 19." loading="lazy"></div>
-          <figcaption>Figure 5: R26 rotor (left) and prototype rotor (right), following the labels in the source presentation. Source: 27 Suspension, slide 19.</figcaption>
-        </figure>
+        <h3>5.1. Problems Faced &amp; Proposed Resolutions</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Problem or shortcoming</th>
+              <th>Effect on the results</th>
+              <th>Proposed resolution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A rotating rotor cannot be modelled directly in a static thermal analysis.</td>
+              <td>Hot spots under the pads would be missed.</td>
+              <td><strong>Resolved:</strong> the rotor is analysed at 15°, 30°, 45°, 60° and 75° positions (Section 4.3).</td>
+            </tr>
+            <tr>
+              <td>The convective heat transfer coefficient is assumed constant.</td>
+              <td>Rotor temperatures over a full lap may be over- or under-estimated.</td>
+              <td>Build a multi-step transient thermal analysis over a full lap profile, then compare it with rotor temperatures measured during track testing.</td>
+            </tr>
+            <tr>
+              <td>Airflow inside the wheel is turbulent and unknown.</td>
+              <td>The cooling rate used in the simulation is uncertain.</td>
+              <td>Bound the result with low and high cooling cases now, and refine it with CFD or test data later.</td>
+            </tr>
+            <tr>
+              <td>Uneven pad–rotor contact from micro-warpage is not modelled.</td>
+              <td>Local temperatures and wear may differ from the simulation.</td>
+              <td>Inspect the rotors for warpage and uneven pad wear after each test session.</td>
+            </tr>
+            <tr>
+              <td>The calculations are not yet validated on the car.</td>
+              <td>Real brake balance and lock-up behaviour are unconfirmed.</td>
+              <td>Brake tests with the tractive system off to confirm four-wheel lock-up, then bias tuning and integration with regenerative braking.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Further iterations of the rotor cutout geometry will also be analysed to reduce mass while keeping the highest factor of safety.
+        </p>
       </div>
 
       <div id="sub-section-milestones">
         <h3>5.2. Project Plan &amp; Milestones</h3>
         <p>
-          The FSAE Brake System project schedule spans from July 2026 through May 2027 across four core execution phases:
+          The project runs from July 2026 to May 2027 in four phases, each ending in a measurable milestone:
         </p>
         <table class="data-table">
           <thead>
             <tr>
-              <th>Project Phase</th>
-              <th>Timeline Duration</th>
+              <th>Project phase</th>
+              <th>Timeline</th>
+              <th>Milestone</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><strong>1. Design</strong></td>
               <td>July 2026 – October 2026</td>
+              <td>Brake calculations complete; upright, hub and rotor CAD frozen</td>
             </tr>
             <tr>
               <td><strong>2. Simulation</strong></td>
               <td>August 2026 – November 2026</td>
+              <td>Minimum FOS of 2.0 in all 9 load cases; front rotor below 350 °C</td>
             </tr>
             <tr>
               <td><strong>3. Manufacture</strong></td>
               <td>November 2026 – December 2026</td>
+              <td>Rotors and uprights machined; corner assembly weighed against the 1.20 kg target</td>
             </tr>
             <tr>
               <td><strong>4. Assembly and Testing</strong></td>
               <td>December 2026 – May 2027</td>
+              <td>Four-wheel lock-up demonstrated; brake bias tuned; regenerative braking integrated; transient thermal model compared with track data</td>
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <div id="references" class="references">
+        <h3>References</h3>
+        <ol>
+          <li>SAE International. <em>Formula SAE Rules 2026</em>, Version 1.0. Brake system, brake test and endurance event requirements.</li>
+          <li>Limpert, R. (2011). <em>Brake Design and Safety</em> (3rd ed.). SAE International.</li>
+          <li>Milliken, W. F., &amp; Milliken, D. L. (1995). <em>Race Car Vehicle Dynamics</em>. SAE International.</li>
+          <li>NUS Formula SAE (2026). <em>27 Suspension</em> [internal team presentation]. Source of Figures 1–5.</li>
+        </ol>
       </div>
     <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-4.html" data-page="section-4.html">← Previous chapter</a><a href="?page=all" data-page="all">Read the full report →</a></nav></article>
 <noscript><p>Enable JavaScript to use chapter navigation. All chapters are shown below.</p><style>.chapter[hidden]{display:block!important}</style></noscript>

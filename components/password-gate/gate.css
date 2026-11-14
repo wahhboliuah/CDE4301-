@@ -1,0 +1,16 @@
+/* Password screen: the report stays hidden until the password is entered. */
+.pw-locked body > :not(.pw-gate) { display: none !important; }
+.pw-gate { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; background: #f7f9fc; }
+.pw-card { width: min(100%, 460px); padding: 34px 32px 28px; border: 1px solid var(--line, #e4e9ef); border-radius: 12px; background: #fff; box-shadow: 0 8px 30px #1723331a; }
+.pw-eyebrow { margin: 0 0 10px; text-transform: uppercase; letter-spacing: .13em; font-size: .72rem; font-weight: 700; color: var(--muted, #66758a); text-align: left; }
+.pw-title { margin: 0 0 14px; font-size: 1.45rem; line-height: 1.25; letter-spacing: -.015em; }
+.pw-text { margin: 0 0 20px; font-size: .95rem; line-height: 1.6; color: #405167; text-align: left; }
+.pw-label { display: block; margin-bottom: 6px; font-size: .85rem; font-weight: 650; }
+.pw-row { display: flex; gap: 8px; }
+.pw-row input { flex: 1; min-width: 0; padding: 9px 12px; border: 1px solid #c8d5e3; border-radius: 6px; font: inherit; font-size: 1rem; }
+.pw-row input:focus { outline: 3px solid #3884ba55; border-color: var(--accent, #19558a); }
+.pw-row button { padding: 9px 16px; border: 0; border-radius: 6px; background: var(--accent, #19558a); color: #fff; font-size: .92rem; font-weight: 650; white-space: nowrap; }
+.pw-row button:hover { background: #134874; }
+.pw-error { min-height: 1.4em; margin: 10px 0 0; font-size: .85rem; color: #b2363e; text-align: left; }
+@media (max-width: 420px) { .pw-card { padding: 26px 20px 22px; } .pw-row { flex-direction: column; } }
+@media print { .pw-gate { display: none; } }
