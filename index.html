@@ -22,7 +22,7 @@
           Within the NUS Formula SAE organizational structure, the vehicle development is divided into two primary branches: Powertrain (Accumulator, Tractive, Low Voltage, and High Voltage) and Chassis (Aerodynamics, Frame, Vehicle Dynamics Suspension, and Vehicle Dynamics Laptime Simulation), alongside Future Systems development. The primary objective of the suspension system is to keep the tyres at an optimal angle relative to the ground to maximize all driving forces acting on the racecar.
         </p>
         <p>
-          <strong>Project objective and scope.</strong> This project designs the R27e brake system and the brake corner components it depends on (upright, hub and brake rotor). It has two objectives. The first is to minimise mass: a rear corner assembly under 1.20 kg, 18% lighter than R26’s 1.47 kg, that can still lock all four wheels. The second is to keep the brakes in their operating temperature window. Pad friction depends on temperature [2], so the brakes should warm up quickly, which a lower rotor mass helps, and then stay below the 350 °C limit through Endurance. R26's brakes reached about 435 °C. The two objectives pull against each other, because a lighter rotor stores less heat and runs hotter. Resolving this needs a design method that predicts rotor cooling (Section 5.2). Hydraulic sizing, rotor design, and structural and thermal validation are in scope. Suspension geometry and the regenerative braking control strategy are outside the scope, apart from making the hydraulic system work alongside regenerative braking.
+          <strong>Project objective and scope.</strong> This project designs the R27e brake system and the brake corner components it depends on (upright, hub and brake rotor). It has two objectives. The first is to minimise mass: a rear corner assembly under 1.20 kg, 18% lighter than R26’s 1.47 kg, that can still lock all four wheels. The second is to keep the brakes in their operating temperature window. Pad friction depends on temperature [2], so the brakes should warm up quickly, which a lower rotor mass helps, and then stay below the 350 °C limit through Endurance. R26's front brakes reached 567 °C in testing. The two objectives pull against each other, because a lighter rotor stores less heat and runs hotter. Resolving this needs a design method that predicts rotor cooling (Section 5.2). Hydraulic sizing, rotor design, and structural and thermal validation are in scope. Suspension geometry and the regenerative braking control strategy are outside the scope, apart from making the hydraulic system work alongside regenerative braking.
         </p>
       </div>
 
@@ -124,12 +124,12 @@
           Two primary engineering bottlenecks govern the brake system design:
         </p>
         <ul>
-          <li><strong>Endurance Thermal Bottleneck:</strong> 22 km of continuous, repeated braking during the Endurance event generates extreme temperatures at the brake rotors. Excessive heat leads to lower braking efficiency via <em>brake fade</em> and structural <em>brake rotor warpage</em> [2]. Brake temperatures logged on the R26 car's MoTeC data logger reached about 435 °C in Endurance, well above the 350 °C target (Figure 2).</li>
+          <li><strong>Endurance Thermal Bottleneck:</strong> 22 km of continuous, repeated braking during the Endurance event generates extreme temperatures at the brake rotors. Excessive heat leads to lower braking efficiency via <em>brake fade</em> and structural <em>brake rotor warpage</em> [2]. Front brake temperatures logged on the R26 car's MoTeC data logger reached 567 °C in a 6-minute test session, well above the 350 °C target (Figure 2).</li>
           <li><strong>Unsprung Mass Penalty:</strong> Oversized brake components heavily penalize unsprung mass and rotational inertia. This results in degraded vehicle dynamics: loss of mechanical tyre grip over bumps, higher steering effort (harder to turn), and slower transient suspension and acceleration response [3].</li>
         </ul>
         <figure class="report-figure" id="r26-brake-temperature">
-          <img src="assets/r26_brake_temperature.png" alt="MoTeC log of the R26 Endurance run: vehicle speed above, front left and right brake temperatures below, rising to peaks of 434.9 and 435.5 °C." loading="lazy">
-          <figcaption>Figure 2: R26 Endurance log (MoTeC). Speed (top) and front brake temperatures (bottom), peaking at 434.9 °C (left) and 435.5 °C (right).</figcaption>
+          <img src="assets/r26_brake_temperature.png" alt="MoTeC log of an R26 test session: rear wheel speeds above, front left and right brake temperatures below, rising lap by lap to peaks of 567.0 and 542.0 °C." loading="lazy">
+          <figcaption>Figure 2: R26 brake shutoff regen test, 10 May 2026 (MoTeC). Rear wheel speeds (top) and front brake temperatures (bottom), peaking at 567.0 °C (left) and 542.0 °C (right).</figcaption>
         </figure>
       </div>
 
@@ -160,7 +160,7 @@
             <tr>
               <td>Operating Front Rotor Temp</td>
               <td><strong>350 °C Ceiling</strong></td>
-              <td>Keeps the rotor within its usable temperature range and limits heat flow into the pads, hub and brake fluid. R26 reached about 435 °C.</td>
+              <td>Keeps the rotor within its usable temperature range and limits heat flow into the pads, hub and brake fluid. R26 reached 567 °C.</td>
             </tr>
           </tbody>
         </table>
@@ -368,7 +368,7 @@
           </tbody>
         </table>
         <p>
-          <strong>Further research after the interim presentation</strong> added two criteria that the original matrix missed: corrosion resistance and strength at the rotor's peak temperature. This changed the selection from 4130 to <strong>17-4PH stainless steel</strong>. At 500 °C, 17-4PH keeps a yield strength of about 539 MPa, against 279 MPa for 4130 (MMPDS-11 data quoted in [7]). It therefore resists softening, warping and coning far better near the 435 °C peaks logged on R26. Its corrosion resistance is comparable to 304 stainless steel [5], so the friction faces stay free of rust without a coating that would wear off under the pads, and it is the most ductile option. The trade-offs are low thermal conductivity, about 18 W/m·K [6], and friction consistency. In dynamometer tests at MIT, 17-4PH gave the least consistent friction coefficient of the three materials, (Figure 5), although only one pad compound was tested and the study recommended retesting with other pads [7]. Friction-versus-temperature testing with the R27e pads is therefore part of the plan (Section 5.1).
+          <strong>Further research after the interim presentation</strong> added two criteria that the original matrix missed: corrosion resistance and strength at the rotor's peak temperature. This changed the selection from 4130 to <strong>17-4PH stainless steel</strong>. At 500 °C, 17-4PH keeps a yield strength of about 539 MPa, against 279 MPa for 4130 (MMPDS-11 data quoted in [7]). It therefore resists softening, warping and coning far better at the 500–570 °C temperatures logged on R26. Its corrosion resistance is comparable to 304 stainless steel [5], so the friction faces stay free of rust without a coating that would wear off under the pads, and it is the most ductile option. The trade-offs are low thermal conductivity, about 18 W/m·K [6], and friction consistency. In dynamometer tests at MIT, 17-4PH gave the least consistent friction coefficient of the three materials, (Figure 5), although only one pad compound was tested and the study recommended retesting with other pads [7]. Friction-versus-temperature testing with the R27e pads is therefore part of the plan (Section 5.1).
         </p>
         <figure class="report-figure" id="mit-rotor-friction">
           <img src="assets/mit_rotor_material_mu.png" alt="Scatter plot of pad-rotor friction coefficient against brake pad temperature from 50 to 550 °C for cast iron, 4130 and 17-4 stainless rotors. 4130 forms a tight flat band near 0.35 to 0.4; 17-4 runs are more spread out between 0.3 and 0.5." loading="lazy">
@@ -471,7 +471,7 @@
         <ol>
           <li><strong>Calibrate:</strong> fit <var>R</var><sub>eff</sub> to the cooling sections of one logged session, where temperature decays exponentially with no braking.</li>
           <li><strong>Predict:</strong> run the model for a different session, using its logged speed and brake pressure to calculate <var>Q</var><sub>brake</sub>.</li>
-          <li><strong>Validate:</strong> compare predicted and logged rotor temperatures, including the 435 °C peaks. The target is peak temperature within ±10%.</li>
+          <li><strong>Validate:</strong> compare predicted and logged rotor temperatures, including the 567 °C peak. The target is peak temperature within ±10%.</li>
           <li><strong>Apply:</strong> run the validated model over an Endurance lap profile for R27e rotor candidates, and reduce mass until the predicted peak reaches the 350 °C limit with margin.</li>
         </ol>
         <p>
