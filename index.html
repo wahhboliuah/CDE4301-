@@ -144,7 +144,7 @@
           <tbody>
             <tr>
               <td>Peak Deceleration</td>
-              <td><strong>1.595 G</strong></td>
+              <td><strong>1.50 G</strong></td>
               <td>Ensure optimal brake balance of the car and full 4-wheel lock-up capability.</td>
             </tr>
             <tr>
@@ -155,7 +155,7 @@
             <tr>
               <td>Operating Front Rotor Temp</td>
               <td><strong>350 °C Ceiling</strong></td>
-              <td>Maintains rotor temperatures safely below the material yield softening threshold.</td>
+              <td>Keeps the rotor within its usable temperature range and limits heat flow into the pads, hub and brake fluid.</td>
             </tr>
           </tbody>
         </table>
@@ -186,18 +186,18 @@
           By plotting the <strong>Tire Capacity Braking Force (Supply)</strong> against the <strong>Theoretical Optimal Braking Force (Demand)</strong> across deceleration levels (G), the exact lock-up threshold for each axle is identified. Because longitudinal weight transfer shifts normal load heavily onto the front axle during deceleration [3], the rear tires converge earlier while the front tires are prioritized for peak stopping power.
         </p>
         <p>
-          Total tractive braking force is governed by Newton's second law (<var>F</var> = <var>ma</var>), where the front tractive force equals the total required braking force minus the rear tire capacity. From the polynomial convergence curves, the front braking force demand intersects the front tire capacity limit at exactly <strong>1.595 G</strong>.
+          Tyre capacity comes from Tire Test Consortium (TTC) data for the Hoosier 18.0×6.0-10 R20, fitted as a cubic in normal load and scaled by 2/3. The scaling allows for the abrasive test surface, which gives more grip than a real track. Total braking force follows Newton's second law (<var>F</var> = <var>ma</var>). Goal Seek finds the deceleration at which the front and rear tyre capacities together equal the force required: <strong>1.50 G</strong>. At this point both axles reach their grip limit almost together (Figure 2), which is the ideal brake balance.
         </p>
         <figure class="report-figure" id="braking-graph">
-          <img src="assets/braking_forces_graph.png" alt="Graph comparing front and rear theoretical optimal braking forces and tyre capacity against deceleration in G." loading="lazy">
-          <figcaption>Figure 2: Front and rear braking force demand and tyre capacity versus deceleration. Source: 27 Suspension, slide 12. Open the image at full size to read the equations and legend.</figcaption>
+          <img src="assets/braking_forces_graph.png" alt="Graph of front and rear braking force required and tyre capacity per wheel against deceleration, with the friction limit marked at 1.50 G." loading="lazy">
+          <figcaption>Figure 2: Braking force required and tyre capacity per wheel against deceleration. Solid lines show force required; dashed lines show tyre capacity. Source: 27 Brakes Calculations workbook.</figcaption>
         </figure>
       </div>
 
       <div id="sub-section-sizing">
         <h3>3.2. Force, Pressure &amp; Hardware Sizing</h3>
         <p>
-          Using Goal Seek optimization around the 1.595 G peak braking target, the longitudinal forces, hydraulic inline pressures, and master cylinder bore sizes were finalized:
+          From the 1.50 G limit, the forces, torques and line pressures were calculated per wheel, and the master cylinders were sized (wheel torque uses the 0.197 m rolling radius):
         </p>
         <table class="data-table">
           <thead>
@@ -211,45 +211,45 @@
             <tr>
               <td rowspan="3"><strong>1. Vehicle Dynamics</strong></td>
               <td>Peak Braking Deceleration (Goal Seek)</td>
-              <td>1.595 G</td>
+              <td>1.50 G</td>
             </tr>
             <tr>
-              <td>Front Longitudinal Braking Force</td>
-              <td>1684.71 N</td>
+              <td>Front Longitudinal Braking Force (per wheel)</td>
+              <td>1,522 N</td>
             </tr>
             <tr>
-              <td>Rear Longitudinal Braking Force</td>
-              <td>350.123 N (Total: 2034.83 N)</td>
+              <td>Rear Longitudinal Braking Force (per wheel)</td>
+              <td>385 N</td>
             </tr>
             <tr>
               <td rowspan="4"><strong>2. Force &amp; Pressure</strong></td>
-              <td>Front Braking Torque</td>
-              <td>663.78 Nm</td>
+              <td>Front Braking Torque (per wheel)</td>
+              <td>300 Nm</td>
             </tr>
             <tr>
-              <td>Rear Braking Torque</td>
-              <td>137.95 Nm</td>
+              <td>Rear Braking Torque (per wheel)</td>
+              <td>76 Nm</td>
             </tr>
             <tr>
               <td>Front Hydraulic Inline Pressure</td>
-              <td>6.80 MPa</td>
+              <td>3.07 MPa</td>
             </tr>
             <tr>
               <td>Rear Hydraulic Inline Pressure</td>
-              <td>3.37 MPa</td>
+              <td>1.85 MPa</td>
             </tr>
             <tr>
               <td rowspan="3"><strong>3. Hardware Sizing</strong></td>
               <td>Master Cylinder Bore Size (Front / Rear)</td>
-              <td>15.8 mm / 25.4 mm</td>
+              <td>15.88 mm / 25.4 mm</td>
             </tr>
             <tr>
-              <td>Mechanical Brake Bias (Front)</td>
-              <td>0.41</td>
+              <td>Front Share of Braking Force at the Limit</td>
+              <td>0.80</td>
             </tr>
             <tr>
-              <td>Driver Pedal Effort (Hard Braking)</td>
-              <td>763 N</td>
+              <td>Driver Pedal Effort (4:1 pedal ratio)</td>
+              <td>387 N</td>
             </tr>
           </tbody>
         </table>
@@ -340,15 +340,21 @@
               <td>3</td>
             </tr>
             <tr>
+              <td>Corrosion Resistance</td>
+              <td>1</td>
+              <td>1</td>
+              <td>3</td>
+            </tr>
+            <tr>
               <td><strong>Net Score</strong></td>
-              <td><strong>12</strong></td>
-              <td><strong>13 (Selected)</strong></td>
-              <td><strong>11</strong></td>
+              <td><strong>13</strong></td>
+              <td><strong>14</strong></td>
+              <td><strong>14 (Selected)</strong></td>
             </tr>
           </tbody>
         </table>
         <p>
-          <strong>4130 Steel</strong> achieved the highest net score (13 points), offering superior resistance to thermal deformation, stable friction coefficient across operating temperatures, and good ductility compared to brittle cast iron.
+          An initial matrix without corrosion resistance ranked 4130 first. Adding corrosion resistance ties 4130 and <strong>17-4PH stainless steel</strong> at 14 points, and 17-4PH was selected. Its corrosion resistance is comparable to 304 stainless steel [5], so the friction faces stay free of rust between sessions without a coating that would wear off under the pads. It keeps high strength up to about 316 °C [5] and is the most ductile option, which suits a thin, perforated rotor under repeated thermal cycling. The trade-off is low thermal conductivity, about 18 W/m·K [6], so heat spreads slowly and the friction surface runs hotter. The multi-step thermal analysis in Section 4.3 is therefore used to check the rotor temperature limit.
         </p>
         <figure class="report-figure" id="rotor-thermal">
           <img src="assets/rotor_fea.png" alt="Meshed brake rotor and hub showing a coloured contour with minimum and maximum markers." loading="lazy">
@@ -423,6 +429,11 @@
               <td>Real brake balance and lock-up behaviour are unconfirmed.</td>
               <td>Brake tests with the tractive system off to confirm four-wheel lock-up, then bias tuning and integration with regenerative braking.</td>
             </tr>
+            <tr>
+              <td>With a 25.4 mm rear master cylinder, the rear-biased brake-test setting needs a 0.39 front pushrod share, just beyond the bias bar's 0.41 limit.</td>
+              <td>The bar may not reach the intended setting for the brake test.</td>
+              <td>Evaluate a 22.2 mm (7/8 in) rear master cylinder, which moves the setting to 0.46, within the bar's range.</td>
+            </tr>
           </tbody>
         </table>
         <p>
@@ -474,7 +485,9 @@
           <li>SAE International. <em>Formula SAE Rules 2026</em>, Version 1.0. Brake system, brake test and endurance event requirements.</li>
           <li>Limpert, R. (2011). <em>Brake Design and Safety</em> (3rd ed.). SAE International.</li>
           <li>Milliken, W. F., &amp; Milliken, D. L. (1995). <em>Race Car Vehicle Dynamics</em>. SAE International.</li>
-          <li>NUS Formula SAE (2026). <em>27 Suspension</em> [internal team presentation]. Source of Figures 1–5.</li>
+          <li>NUS Formula SAE (2026). <em>27 Suspension</em> [internal team presentation]. Source of Figures 1 and 3–5.</li>
+          <li>Jacquet. <em>17-4 PH (UNS S17400) Technical Sheet</em>. Corrosion resistance and elevated-temperature strength.</li>
+          <li>Tech Steel &amp; Materials. <em>Stainless Steel 17-4PH: Physical Properties</em>. Thermal conductivity.</li>
         </ol>
       </div>
     <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-4.html" data-page="section-4.html">← Previous chapter</a><a href="?page=all" data-page="all">Read the full report →</a></nav></article>
