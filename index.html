@@ -115,7 +115,7 @@
           The competition rules set the baseline. The brake system must act on all four wheels through two independent hydraulic circuits, and must lock all four wheels in the brake test. Electric vehicles must pass this test with the tractive system switched off [1]. Regenerative braking may use only the first 90% of pedal travel, so the hydraulic system alone must be able to stop the car [1]. The Endurance event covers about 22 km at average speeds of 48–57 km/h, with top speeds near 105 km/h [1], so the rotors absorb many stops in quick succession with little time to cool.
         </p>
         <p>
-          The value of this project is to meet these requirements with less mass than the R26 design. Lower unsprung mass helps the tyre stay in contact with the track over bumps [3], and lower rotor temperatures reduce brake fade [2]. Compared with R26, the design changes the rotor from elongated slots to circular perforations (Figure 7) and checks the rotor at several angular positions relative to the pads, rather than at a single position.
+          The value of this project is to meet these requirements with less mass than the R26 design. Lower unsprung mass helps the tyre stay in contact with the track over bumps [3], and lower rotor temperatures reduce brake fade [2]. Compared with R26, the design changes the rotor from elongated slots to circular perforations (Figure 6) and checks the rotor at several angular positions relative to the pads, rather than at a single position.
         </p>
       </div>
 
@@ -375,14 +375,10 @@
           <img src="assets/mit_rotor_material_mu.png" alt="Scatter plot of pad-rotor friction coefficient against brake pad temperature from 50 to 550 °C for cast iron, 4130 and 17-4 stainless rotors. 4130 forms a tight flat band near 0.35 to 0.4; 17-4 runs are more spread out between 0.3 and 0.5." loading="lazy">
           <figcaption>Figure 5: Dynamometer friction coefficient against pad temperature for three rotor materials with Wilwood CM pads; light grey is 17-4PH. Reproduced from Mora (2018), Figure 9 [7].</figcaption>
         </figure>
-        <figure class="report-figure" id="rotor-thermal">
-          <img src="assets/rotor_fea.png" alt="Meshed brake rotor and hub showing a coloured contour with minimum and maximum markers." loading="lazy">
-          <figcaption>Figure 6: ANSYS model of the brake rotor and hub. Source: 27 Suspension, slide 15.</figcaption>
-        </figure>
         <figure class="report-figure" id="rotor-designs">
           <div class="figure-pair"><img src="assets/r26_rotor.png" alt="R26 rotor drawing with elongated slots, as labelled on slide 19." loading="lazy">
           <img src="assets/prototype_rotor.png" alt="Prototype rotor drawing with circular perforations, as labelled on slide 19." loading="lazy"></div>
-          <figcaption>Figure 7: R26 slotted rotor (left) and R27e perforated prototype rotor (right). Source: 27 Suspension, slide 19.</figcaption>
+          <figcaption>Figure 6: R26 slotted rotor (left) and R27e perforated prototype rotor (right). Source: 27 Suspension, slide 19.</figcaption>
         </figure>
       </div>
 
@@ -399,6 +395,10 @@
           <li>Simulate subsequent braking from average track speed using the maximum rotor temperature as the initial thermal condition.</li>
           <li>Repeat the thermal and structural simulations across discrete angular orientations of the brake rotor at <strong>15°, 30°, 45°, 60°, and 75°</strong> to accurately stress-test the slotted cutout geometry as the rotor spins past the caliper pads.</li>
         </ol>
+        <figure class="report-figure" id="rotor-sim-setup">
+          <img src="assets/rotor_sim_setup.png" alt="ANSYS Mechanical analysis tree beside the meshed perforated prototype rotor with its six mounting bosses." loading="lazy">
+          <figcaption>Figure 7: ANSYS rotor setup (results in progress). Transient thermal analysis applies braking heat at the pad contact; the temperatures feed a structural analysis with normal and tangential pad forces and fixed mounting bosses.</figcaption>
+        </figure>
       </div>
     <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-3.html" data-page="section-3.html">← Previous chapter</a><a href="?page=section-5.html" data-page="section-5.html">Next chapter →</a></nav></article><article class="chapter" data-chapter="section-5.html" hidden><div id="section-future">
         <h2>5. Problems, Shortcomings &amp; Project Plan</h2>
@@ -524,7 +524,7 @@
           <li>SAE International. <em>Formula SAE Rules 2026</em>, Version 1.0. Brake system, brake test and endurance event requirements.</li>
           <li>Limpert, R. (2011). <em>Brake Design and Safety</em> (3rd ed.). SAE International.</li>
           <li>Milliken, W. F., &amp; Milliken, D. L. (1995). <em>Race Car Vehicle Dynamics</em>. SAE International.</li>
-          <li>NUS Formula SAE (2026). <em>27 Suspension</em> [internal team presentation]. Source of Figures 1, 4, 6 and 7.</li>
+          <li>NUS Formula SAE (2026). <em>27 Suspension</em> [internal team presentation]. Source of Figures 1, 4 and 6.</li>
           <li>Jacquet. <em>17-4 PH (UNS S17400) Technical Sheet</em>. Corrosion resistance and elevated-temperature strength.</li>
           <li>Tech Steel &amp; Materials. <em>Stainless Steel 17-4PH: Physical Properties</em>. Thermal conductivity.</li>
           <li>Mora, L. A. (2018). <em>Design of a FSAE Braking System</em> [BSc thesis]. Massachusetts Institute of Technology.</li>
