@@ -347,15 +347,21 @@
               <td>3</td>
             </tr>
             <tr>
+              <td>Strength at 500 °C</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
               <td><strong>Net Score</strong></td>
-              <td><strong>13</strong></td>
               <td><strong>14</strong></td>
-              <td><strong>14 (Selected)</strong></td>
+              <td><strong>16</strong></td>
+              <td><strong>17 (Selected)</strong></td>
             </tr>
           </tbody>
         </table>
         <p>
-          An initial matrix without corrosion resistance ranked 4130 first. Adding corrosion resistance ties 4130 and <strong>17-4PH stainless steel</strong> at 14 points, and 17-4PH was selected. Its corrosion resistance is comparable to 304 stainless steel [5], so the friction faces stay free of rust between sessions without a coating that would wear off under the pads. It keeps high strength up to about 316 °C [5] and is the most ductile option, which suits a thin, perforated rotor under repeated thermal cycling. The trade-off is low thermal conductivity, about 18 W/m·K [6], so heat spreads slowly and the friction surface runs hotter. The multi-step thermal analysis in Section 4.3 is therefore used to check the rotor temperature limit.
+          <strong>Further research after the interim presentation</strong> added two criteria that the original matrix missed: corrosion resistance and strength at the rotor's peak temperature. This changed the selection from 4130 to <strong>17-4PH stainless steel</strong>. At 500 °C, 17-4PH keeps a yield strength of about 539 MPa, against 279 MPa for 4130 (MMPDS-11 data quoted in [7]). It therefore resists softening, warping and coning far better at the temperatures the rotor reaches. Its corrosion resistance is comparable to 304 stainless steel [5], so the friction faces stay free of rust without a coating that would wear off under the pads, and it is the most ductile option. The trade-offs are low thermal conductivity, about 18 W/m·K [6], and friction consistency. In dynamometer tests at MIT, 17-4PH gave the least consistent friction coefficient of the three materials, although only one pad compound was tested and the study recommended retesting with other pads [7]. Friction-versus-temperature testing with the R27e pads is therefore part of the plan (Section 5.1).
         </p>
         <figure class="report-figure" id="rotor-thermal">
           <img src="assets/rotor_fea.png" alt="Meshed brake rotor and hub showing a coloured contour with minimum and maximum markers." loading="lazy">
@@ -435,6 +441,11 @@
               <td>The bar may not reach the intended setting for the brake test.</td>
               <td>Evaluate a 22.2 mm (7/8 in) rear master cylinder, which moves the setting to 0.46, within the bar's range.</td>
             </tr>
+            <tr>
+              <td>The friction consistency of 17-4PH with the R27e pads is unverified; published dynamometer data used a different pad [7].</td>
+              <td>Pedal effort and brake balance may vary as the brakes heat up.</td>
+              <td>Measure friction coefficient against temperature with the R27e pads, on a dynamometer or from logged track data, before the design is frozen.</td>
+            </tr>
           </tbody>
         </table>
         <p>
@@ -489,6 +500,7 @@
           <li>NUS Formula SAE (2026). <em>27 Suspension</em> [internal team presentation]. Source of Figures 1 and 3–5.</li>
           <li>Jacquet. <em>17-4 PH (UNS S17400) Technical Sheet</em>. Corrosion resistance and elevated-temperature strength.</li>
           <li>Tech Steel &amp; Materials. <em>Stainless Steel 17-4PH: Physical Properties</em>. Thermal conductivity.</li>
+          <li>Mora, L. A. (2018). <em>Design of a FSAE Braking System</em> [BSc thesis]. Massachusetts Institute of Technology.</li>
         </ol>
       </div>
     <nav class="page-nav" aria-label="Chapter navigation"><a href="?page=section-4.html" data-page="section-4.html">← Previous chapter</a><a href="?page=appendix-a.html" data-page="appendix-a.html">Appendix A →</a></nav></article>
